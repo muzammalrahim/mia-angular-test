@@ -1,0 +1,10 @@
+<div class="container my-4">
+  <h1 class="text-center">Mia Table And Mia Form Test Angular Aplication</h1>
+  <mia-loading-squares *ngIf="loading" [color]="'red'"></mia-loading-squares>
+  <div *ngIf="mockData && !loading">
+    <div class="text-right mb-2">
+      <button type="button" class="btn btn-primary" (click)="onClickOpenForm(item)">Add New Client</button>
+    </div>
+    <mia-table #tableComp [config]="tableConfig" [mockData]="mockData"></mia-table>
+  </div>
+</div>
